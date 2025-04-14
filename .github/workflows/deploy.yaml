@@ -27,6 +27,7 @@ jobs:
   compile:
     # TODO 02 - Make sure that the `test` job is run before `compile`
     needs: test
+    if.success()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
